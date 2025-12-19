@@ -1,26 +1,297 @@
+
 * {
-    /*padding: 0;
-    margin: 0;*/
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Inter', sans-serif;
+html { scroll-behavior: smooth; }
+
+body{
+    font-family: Inter, sans-serif;
+    color: #fff;
+    background-image: url("assets/hero.png");
+    background-size: cover;
 }
 
-h1, h2, .hero-title {
-    font-family: 'Montserrat', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body{
+    font-family: Inter, sans-serif;
+    background: #0b0b0c;
+    color: #fff;
 }
 
 
-.ILIA-title-title{
-    font-weight: bold;
-    font-size: 2.5rem;
-    color: yellow;
+
+
+
+.hero{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+
+    background-size: cover;
+    background-position: center;
+
+
+    padding: 40px 40px 30px;
 }
 
-HCK-title-title{
-    font-weight: bold;
-    font-size: 2.5rem;
-    color: cyan;
+
+.hero::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+
+.nav, .title, .bottom{
+    position: relative;
+    z-index: 1;
+}
+
+
+.title{
+    font-family: Montserrat, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+
+
+    font-size: 300px;
+    line-height: 0.9;
+    width: 100%;
+    text-align: center;
+
+
+    margin-top: 10px;
+}
+
+.accent{ color: #ffba00; }
+.muted{ color: rgba(255,255,255,0.6); }
+
+
+.pill{
+    position: absolute;
+
+    padding: 10px 18px;
+    border-radius: 999px;
+
+    text-decoration: none;
+    color: rgba(255,255,255,0.9);
+    font-size: 14px;
+
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.18);
+}
+
+
+.pill-projects { left: 70px;  top: 210px; }
+.pill-dashboard{ left: 50%;    top: 210px; }
+.pill-contact  { right: 70px; top: 210px; }
+.pill-about    { left: 70px;  top: 310px; }
+
+
+.bottom{
+    position: absolute;
+    left: 40px;
+    right: 40px;
+    bottom: 24px;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+}
+
+.bottom-item{ color: rgba(255,255,255,0.85); }
+
+
+.section{
+    padding: 90px 40px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.pill{
+    transition:
+            box-shadow 0.3s ease,
+            background 0.3s ease,
+            backdrop-filter 0.3s ease,
+            transform 0.3s ease;
+}
+
+.pill:hover{
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(14px);
+
+    box-shadow:
+            0 8px 24px rgba(0,0,0,0.35);
+
+    transform: translateY(-2px);
+}
+
+.section h2{
+    font-family: Montserrat, sans-serif;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.section p{
+    color: rgba(255,255,255,0.8);
+    line-height: 1.6;
+}
+
+
+@media (max-width: 700px){
+    .hero{ padding: 24px; }
+
+    .title{
+        font-size: clamp(56px, 14vw, 110px);
+        margin-top: 20px;
+    }
+
+    .pill{ position: static; display: inline-block; margin: 8px 8px 0 0; }
+    .nav{ margin-top: 16px; }
+
+    .bottom{
+        left: 24px;
+        right: 24px;
+    }
+
+    .section{ padding: 70px 24px; }
+}
+
+.hero{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+
+    background-image: url("assets/hero.PNG");
+    background-size: cover;
+    background-position: center;
+
+
+    padding: 40px 40px 30px;
+}
+
+
+.hero::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+
+.nav, .title, .bottom{
+    position: relative;
+    z-index: 1;
+}
+
+
+.title{
+    font-family: Montserrat, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+
+
+    font-size: clamp(80px, 12vw, 190px);
+    line-height: 0.9;
+
+
+    width: 100%;
+    text-align: center;
+
+
+    margin-top: 10px;
+}
+
+.accent{ color: #ffba00; }
+.muted{ color: rgba(255,255,255,0.6); }
+
+
+.pill{
+    position: absolute;
+
+    padding: 10px 18px;
+    border-radius: 999px;
+
+    text-decoration: none;
+    color: rgba(255,255,255,0.9);
+    font-size: 14px;
+
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.18);
+}
+
+
+.pill-projects { left: 70px;  top: 210px; }
+.pill-dashboard{ left: 50%;    top: 210px;  }
+.pill-contact  { right: 70px; top: 210px; }
+.pill-about    { left: 70px;  top: 310px; }
+
+
+.bottom{
+    position: absolute;
+    left: 40px;
+    right: 40px;
+    bottom: 24px;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+}
+
+.bottom-item{ color: rgba(255,255,255,0.85); }
+
+
+.section{
+    padding: 90px 40px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section h2{
+    font-family: Montserrat, sans-serif;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.section p{
+    color: rgba(255,255,255,0.8);
+    line-height: 1.6;
+}
+
+
+@media (max-width: 700px){
+    .hero{ padding: 24px; }
+
+    .title{
+        font-size: clamp(56px, 14vw, 110px);
+        margin-top: 20px;
+    }
+
+    .pill{ position: static; display: inline-block; margin: 8px 8px 0 0; }
+    .nav{ margin-top: 16px; }
+
+    .bottom{
+        left: 24px;
+        right: 24px;
+    }
+
+    .section{ padding: 70px 24px; }
 }
