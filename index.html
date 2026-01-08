@@ -11,14 +11,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="portfiolio/styling.css">
+    <script src="index.js" defer></script>
 
 </head>
 <body>
 
 
 <header class="hero" id="top">
-
-
 
     <nav class="nav">
         <a class="pill pill-projects" href="#projects">Projects</a>
@@ -29,8 +28,16 @@
 
 
     <h1 class="title">
-        <span class="accent">ILIA</span><span class="accent">.</span><span class="muted">HCK</span>
+        <span class="accent">I</span>
+        <span class="accent">L</span>
+        <span class="accent">I</span>
+        <span class="accent">A</span>
+        <span class="accent">.</span>
+        <span class="muted">H</span>
+        <span class="muted">C</span>
+        <span class="muted">K</span>
     </h1>
+
 
 
     <div class="bottom">
@@ -46,26 +53,115 @@
 
 
 <main>
-    <section id="projects" class="section">
-        <h2>Projects</h2>
-        <p>Hier komen je projecten.</p>
+
+
+    <section id="projects" class="section section-projects">
+        <div class="section-head">
+            <h2>Projects</h2>
+            <p>Curated work — branding & fashion visuals.</p>
+        </div>
+
+        <article class="project">
+            <div class="project-intro">
+                <h3>VÆRA — Brand Identity & Mockups</h3>
+                <p>My own minimalist clothing brand, with a focus on timeless elegance and calm.</p>
+                <ul class="project-meta">
+                    <li><strong>Focus:</strong> Branding, Mockups</li>
+                    <li><strong>Tools:</strong> Figma, Adobe Photoshop, Adobe Illustrator</li>
+                </ul>
+            </div>
+
+            <div class="mock-grid">
+                <img src="portfiolio/assets/VÆRA/Artboard 1.png" alt="VÆRA mockup 1">
+                <img src="portfiolio/assets/VÆRA/Artboard 2.png" alt="VÆRA mockup 2">
+                <img src="portfiolio/assets/VÆRA/Artboard 3.png" alt="VÆRA mockup 3">
+                <img src="portfiolio/assets/VÆRA/Artboard 4.png" alt="VÆRA mockup 4">
+                <img src="portfiolio/assets/VÆRA/Artboard 5.png" alt="VÆRA mockup 5">
+                <img src="portfiolio/assets/VÆRA/Artboard 6.png" alt="VÆRA mockup 6">
+                <img src="portfiolio/assets/VÆRA/Artboard 7.png" alt="VÆRA mockup 7">
+                <img src="portfiolio/assets/VÆRA/Artboard 8.png" alt="VÆRA mockup 8">
+            </div>
+        </article>
+
+        <article class="project">
+            <div class="project-intro">
+                <h3>Hympala × Champion — Capsule Collection</h3>
+                <p>
+                    A capsule collection designed during my internship at Hympala,
+                    developed as a collaboration between Hympala and Champion.
+                </p>
+                <ul class="project-meta">
+                    <li><strong>Context:</strong> Internship project</li>
+                    <li><strong>Focus:</strong> Collection design, Visual direction</li>
+                    <li><strong>Tools:</strong> Adobe Photoshop, Adobe Illustrator</li>
+                </ul>
+            </div>
+
+            <div class="mock-grid">
+                <img src="portfiolio/assets/Hympala x Champion/hymp1.webp" alt="Hympala × Champion mockup 1">
+                <img src="portfiolio/assets/Hympala x Champion/hymp2.webp" alt="Hympala × Champion mockup 2">
+                <img src="portfiolio/assets/Hympala x Champion/hymp3.webp" alt="Hympala × Champion mockup 3">
+                <img src="portfiolio/assets/Hympala x Champion/hymp4.webp" alt="Hympala × Champion mockup 4">
+                <img src="portfiolio/assets/Hympala x Champion/hymp5.webp" alt="Hympala × Champion mockup 5">
+                <img src="portfiolio/assets/Hympala x Champion/hymp6.webp" alt="Hympala × Champion mockup 6">
+                <img src="portfiolio/assets/Hympala x Champion/hymp7.webp" alt="Hympala × Champion mockup 7">
+            </div>
+        </article>
+
+
+
+
+
+
+
+
+
     </section>
+
+
+
+
+
+
+
+
+
 
     <section id="dashboard" class="section">
         <h2>Dashboard</h2>
         <p>Hier komt je dashboard (cases / proces / visuals).</p>
     </section>
 
+
+
+
+
     <section id="about" class="section">
         <h2>About me</h2>
-        <p>Korte intro, skills, tools, etc.</p>
+        <p>I am a Belgium-based creative with a strong focus on minimalism, clarity, and thoughtful design.
+            My work is rooted in calm, balance, and timeless aesthetics, while occasionally introducing bold or aggressive elements to break that calm in a controlled and intentional way.
+            I believe in contrast as a design tool — using tension to create impact without losing refinement.</p>
     </section>
+
+
+
 
     <section id="contact" class="section">
         <h2>Contact</h2>
         <p>Mail, socials, formulier (later).</p>
     </section>
+
+
+
 </main>
+
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-btn prev" type="button" aria-label="Previous">&#10094;</button>
+      <img id="lightbox-img" src="" alt="Mockup preview">
+      <button class="lightbox-btn next" type="button" aria-label="Next">&#10095;</button>
+      <button class="lightbox-close" type="button" aria-label="Close">&times;</button>
+  </div>
 
 </body>
 </html>

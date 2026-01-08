@@ -5,9 +5,11 @@
     box-sizing: border-box;
 }
 
-html { scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+}
 
-body{
+body {
     font-family: Inter, sans-serif;
     color: #fff;
     background-image: url("assets/hero.png");
@@ -21,19 +23,18 @@ body{
     box-sizing: border-box;
 }
 
-html { scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+}
 
-body{
+body {
     font-family: Inter, sans-serif;
     background: #0b0b0c;
     color: #fff;
 }
 
 
-
-
-
-.hero{
+.hero {
     min-height: 100vh;
     width: 100%;
     position: relative;
@@ -46,64 +47,72 @@ body{
 }
 
 
-.hero::before{
+.hero::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.55);
+    background: rgba(0, 0, 0, 0.55);
 }
 
 
-.nav, .title, .bottom{
+.nav, .title, .bottom {
     position: relative;
     z-index: 1;
 }
 
-
-.title{
-    font-family: Montserrat, sans-serif;
-    font-weight: 800;
-    text-transform: uppercase;
-
-
-    font-size: 300px;
-    line-height: 0.9;
-    width: 100%;
-    text-align: center;
-
-
-    margin-top: 10px;
+.nav {
+    z-index: 10;
 }
 
-.accent{ color: #ffba00; }
-.muted{ color: rgba(255,255,255,0.6); }
+.accent {
+    color: #ffba00;
+}
+
+.muted {
+    color: rgba(255, 255, 255, 0.6);
+}
 
 
-.pill{
+.pill {
     position: absolute;
 
     padding: 10px 18px;
     border-radius: 999px;
 
     text-decoration: none;
-    color: rgba(255,255,255,0.9);
+    color: rgba(255, 255, 255, 0.9);
     font-size: 14px;
 
-    background: rgba(255,255,255,0.10);
-    border: 1px solid rgba(255,255,255,0.18);
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 
-.pill-projects { left: 70px;  top: 210px; }
-.pill-dashboard{ left: 50%;    top: 210px; }
-.pill-contact  { right: 70px; top: 210px; }
-.pill-about    { left: 70px;  top: 310px; }
+.pill-projects {
+    left: 70px;
+    top: 210px;
+}
+
+.pill-dashboard{
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pill-contact {
+    right: 70px;
+    top: 210px;
+}
+
+.pill-about {
+    left: 70px;
+    top: 310px;
+}
 
 
-.bottom{
+.bottom {
     position: absolute;
-    left: 40px;
-    right: 40px;
+    left: 70px;
+    right: 70px;
     bottom: 24px;
 
     display: flex;
@@ -113,66 +122,73 @@ body{
     font-size: 14px;
 }
 
-.bottom-item{ color: rgba(255,255,255,0.85); }
+.bottom-item {
+    color: rgba(255, 255, 255, 0.85);
+}
 
 
-.section{
+.section {
     padding: 90px 40px;
-    border-top: 1px solid rgba(255,255,255,0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
     max-width: 1100px;
     margin: 0 auto;
 }
 
-.pill{
-    transition:
-            box-shadow 0.3s ease,
-            background 0.3s ease,
-            backdrop-filter 0.3s ease,
-            transform 0.3s ease;
+.pill {
+    transition: box-shadow 0.3s ease,
+    background 0.3s ease,
+    backdrop-filter 0.3s ease,
+    transform 0.3s ease;
 }
 
-.pill:hover{
-    background: rgba(255,255,255,0.18);
+.pill:hover {
+    background: rgba(255, 255, 255, 0.18);
     backdrop-filter: blur(14px);
 
-    box-shadow:
-            0 8px 24px rgba(0,0,0,0.35);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 
     transform: translateY(-2px);
 }
 
-.section h2{
+.section h2 {
     font-family: Montserrat, sans-serif;
     font-weight: 800;
     margin-bottom: 12px;
 }
 
-.section p{
-    color: rgba(255,255,255,0.8);
+.section p {
+    color: rgba(119, 119, 119, 0.8);
     line-height: 1.6;
 }
 
 
-@media (max-width: 700px){
-    .hero{ padding: 24px; }
-
-    .title{
-        font-size: clamp(56px, 14vw, 110px);
-        margin-top: 20px;
+@media (max-width: 700px) {
+    .hero {
+        padding: 24px;
     }
 
-    .pill{ position: static; display: inline-block; margin: 8px 8px 0 0; }
-    .nav{ margin-top: 16px; }
 
-    .bottom{
+    .pill {
+        position: static;
+        display: inline-block;
+        margin: 8px 8px 0 0;
+    }
+
+    .nav {
+        margin-top: 16px;
+    }
+
+    .bottom {
         left: 24px;
         right: 24px;
     }
 
-    .section{ padding: 70px 24px; }
+    .section {
+        padding: 70px 24px;
+    }
 }
 
-.hero{
+.hero {
     min-height: 100vh;
     width: 100%;
     position: relative;
@@ -186,66 +202,72 @@ body{
 }
 
 
-.hero::before{
+.hero::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.55);
+    background: rgba(0, 0, 0, 0.55);
 }
 
 
-.nav, .title, .bottom{
+.nav, .title, .bottom {
     position: relative;
-    z-index: 1;
+
 }
 
 
-.title{
-    font-family: Montserrat, sans-serif;
-    font-weight: 900;
-    text-transform: uppercase;
-
-
-    font-size: clamp(80px, 12vw, 190px);
-    line-height: 0.9;
-
-
-    width: 100%;
-    text-align: center;
-
-
-    margin-top: 10px;
+.accent {
+    color: #ffba00;
 }
 
-.accent{ color: #ffba00; }
-.muted{ color: rgba(255,255,255,0.6); }
+.muted {
+    color: rgba(255, 255, 255, 0.6);
+}
 
 
-.pill{
+.pill {
     position: absolute;
 
     padding: 10px 18px;
     border-radius: 999px;
 
     text-decoration: none;
-    color: rgba(255,255,255,0.9);
+    color: rgba(255, 255, 255, 0.9);
     font-size: 14px;
 
-    background: rgba(255,255,255,0.10);
-    border: 1px solid rgba(255,255,255,0.18);
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    min-width: 140px;
+    text-align: center;
 }
 
 
-.pill-projects { left: 70px;  top: 210px; }
-.pill-dashboard{ left: 50%;    top: 210px;  }
-.pill-contact  { right: 70px; top: 210px; }
-.pill-about    { left: 70px;  top: 310px; }
+.pill-projects {
+    left: 70px;
+    top: 210px;
+}
+
+.pill-dashboard {
+    left: 50%;
+    top: 210px;
+    transform: translateX(-50%);
+}
+
+.pill-contact {
+    right: 70px;
+    top: 210px;
+}
+
+.pill-about {
+    left: 70px;
+    top: 310px;
+}
 
 
-.bottom{
+.bottom {
     position: absolute;
-    left: 40px;
-    right: 40px;
+    left: 70px;
+    right: 70px;
     bottom: 24px;
 
     display: flex;
@@ -255,43 +277,222 @@ body{
     font-size: 14px;
 }
 
-.bottom-item{ color: rgba(255,255,255,0.85); }
+.bottom-item {
+    color: rgba(255, 255, 255, 0.85);
+}
 
 
-.section{
+.section {
     padding: 90px 40px;
-    border-top: 1px solid rgba(255,255,255,0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
     max-width: 1100px;
     margin: 0 auto;
 }
 
-.section h2{
+.section h2 {
     font-family: Montserrat, sans-serif;
     font-weight: 800;
     margin-bottom: 12px;
+    color: #ffffff;
 }
 
-.section p{
-    color: rgba(255,255,255,0.8);
+.section p {
+    color: rgba(255, 255, 255, 0.8);
     line-height: 1.6;
 }
 
 
-@media (max-width: 700px){
-    .hero{ padding: 24px; }
-
-    .title{
-        font-size: clamp(56px, 14vw, 110px);
-        margin-top: 20px;
+@media (max-width: 700px) {
+    .hero {
+        padding: 24px;
     }
 
-    .pill{ position: static; display: inline-block; margin: 8px 8px 0 0; }
-    .nav{ margin-top: 16px; }
-
-    .bottom{
-        left: 24px;
-        right: 24px;
+    .pill {
+        position: static;
+        display: inline-block;
+        margin: 8px 8px 0 0;
+        min-width: 140px;
+        text-align: center;
     }
 
-    .section{ padding: 70px 24px; }
+    .nav {
+        margin-top: 16px;
+    }
+
+
+    .section {
+        padding: 70px 24px;
+    }
+}
+
+
+
+.section-head {
+    margin-bottom: 40px;
+}
+
+.section-head p {
+    color: rgba(255,255,255,0.7);
+    margin-top: 8px;
+}
+
+.section-projects {
+    padding-top: 110px;
+}
+
+.project {
+    margin-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.10);
+    padding-top: 50px;
+}
+
+.project h3{
+    font-family: Montserrat, sans-serif;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.project-intro p{
+    max-width: 70ch;
+}
+
+.project-meta{
+    list-style: none;
+    margin-top: 14px;
+    padding: 0;
+    color: rgba(255,255,255,0.65);
+    font-size: 14px;
+}
+
+.project-meta li{
+    margin-top: 6px;
+}
+
+.mock-grid{
+    margin-top: 40px;
+    column-count: 4;
+    column-gap: 14px;
+}
+
+.mock-grid img{
+
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 14px;
+    break-inside: avoid;
+
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.10);
+    background: rgba(255,255,255,0.03);
+
+}
+
+@media (max-width: 900px){
+    .mock-grid{ column-count: 2; }
+}
+@media (max-width: 520px){
+    .mock-grid{ column-count: 1; }
+}
+
+
+
+@media (max-width: 900px){
+    .mock-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px){
+    .mock-grid{ grid-template-columns: 1fr; }
+    .mock-grid img{ height: auto; }
+}
+
+.mock-grid img{
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.mock-grid img:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+.lightbox{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.lightbox img{
+    max-width: 90vw;
+    max-height: 85vh;
+    display: block;
+}
+
+.lightbox-close{
+    position: absolute;
+    top: 18px;
+    right: 26px;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    font-size: 42px;
+    cursor: pointer;
+}
+
+.lightbox-btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0;
+    background: transparent;
+    color: #fff;
+    font-size: 52px;
+    cursor: pointer;
+    padding: 18px;
+}
+
+.lightbox-btn.prev{ left: 10px; }
+.lightbox-btn.next{ right: 10px; }
+
+
+.hero::before {
+    z-index: 0;
+}
+
+.title {
+    position: relative;
+    z-index: 3;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 900;
+    line-height: 0.95;
+    font-size: clamp(72px, 18vw, 220px);
+    letter-spacing: -0.14em;
+    color: #ffffff;
+
+    word-break: break-word;
+}
+
+.title span{
+    display: inline-block;
+    transition: transform 0.25s ease;
+}
+
+.title span:hover{
+    transform: scale(1.08);
+}
+
+.pill-dashboard{
+    left: 50%;
+    top: 210px;
+    transform: translateX(-50%);
+}
+
+.pill-dashboard:hover{
+    transform: translate(-50%, -2px);
 }
