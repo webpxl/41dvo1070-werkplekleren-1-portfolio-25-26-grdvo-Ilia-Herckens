@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const nextBtn = document.querySelector('.lightbox-btn.next');
   const prevBtn = document.querySelector('.lightbox-btn.prev');
 
-  // Debug: als dit in de console verschijnt, vindt hij je afbeeldingen niet
   if (!images.length) {
     console.log('Geen .mock-grid img gevonden');
     return;
@@ -47,12 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
   prevBtn.addEventListener('click', showPrev);
   closeBtn.addEventListener('click', closeLightbox);
 
-  // Klik op de donkere achtergrond sluit
   lightbox.addEventListener('click', (e) => {
     if (e.target === lightbox) closeLightbox();
   });
 
-  // Keyboard controls
   document.addEventListener('keydown', (e) => {
     if (lightbox.getAttribute('aria-hidden') === 'true') return;
     if (e.key === 'Escape') closeLightbox();
